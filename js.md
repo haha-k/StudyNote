@@ -227,4 +227,79 @@
     Math.round();//四舍五入
     ```
 
-13. 
+    ### 定时器
+
+    ```js
+    setTimeout(()=>{},100);
+    //一段时间后执行函数 （仅一次）
+setInterval(()=>{},100);
+    //每隔一段时间执行函数（N次）
+    ```
+    
+### 如何反转字符串
+
+
+​    
+​    1. ```js
+​       '1234'.split('').reverse().join('');
+​       ```
+​    
+​    2. ```js
+   [...'1234'].reduce((prev,next)=>next+prev);
+​       ```
+
+    3. ```js
+       function rev(str){
+           if(str.length === 1){
+               return str;
+           }
+           return str.slice(-1)+rev(str.slice(0,-1));
+       } 
+       ```
+
+
+### js高度
+
+```js
+
+```
+
+
+
+### 数组去重方法
+
+1. ```js
+   [...new Set(arr))]
+   //转化成集合再转回数组
+   Array.from(new Set(arr));
+   ```
+
+2. ```js
+   arr.filter((item,index,arr)=>arr.indexOf(item) === index)
+   //过滤掉后面出现的索引不等于indexOf的索引
+   ```
+
+3. ```js
+   arr.reduce(a,b=>a.includes(b)?a:[...a,b],[])
+   //返回如果下一个item存在当前reduce后的数组里返回这一个当前数组，否则加进去该数
+   ```
+
+
+
+
+1. 盒模型
+2. css三角形
+3. flex布局 （一行10个 一行5个）
+4. 作用域 作用域链
+5. eventloop
+6. promise
+7. 闭包
+8. bfs
+9. 设计模式  发布订阅模式
+10. 项目状态管理
+11. vue-router的几种
+
+
+
+
+
